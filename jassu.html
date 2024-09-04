@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio </title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="JASVEEN-removebg-preview.png" alt="" width="180px">
+            <ul id="sidemenu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#about">SKILLS</a></li>
+                <li><a href="#portfolio">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <img src="Snapchat-464301875-removebg-preview.png" alt="" align="left" width="380px"><br>
+            <br>
+            <br>
+            <h2>Hi, I'm <span>Jasveen Kaur</span><br></h2>
+            <div class="contain">
+                 <p style="font-size: 25px;">A Web Developer.</p>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p id="paragraph">I'm <span class="names">Jasveen Kaur</span><br>
+                    <br>
+                  Web Developer | Front-End Specialist <br>
+                  Dedicated web developer with a passion for crafting intuitive and visually appealing digital experiences. 
+                  Proficient in HTML, CSS, JavaScript. Skilled in responsive design,user testing. 
+                  Committed to staying up-to-date with the latest web development trends and technologies.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>HTML,CSS,JAVASCRIPT</li>
+                        <br>
+                        <li><span>Programming Language</span><br>C++,Python,JAVA</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-present</span><br>🎓B-Tech(Information Technology)<br>GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title3">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="TODOlist.png">
+                <div class="layer">
+                    <h3>TO DO List</h3>
+                   
+                </div>
+            </div>
+            <div class="work">
+                <img src="astrosite.png">
+                <div class="layer">
+                    <h3>My Astrology Site(Landing Page)</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Calculatorimg.png">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title2">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i><b>jasveenkaur180@gmail.com</b></p>
+                <button id="btn3">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/jasveen-kaur-b4a796271?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6u7LBaiWS2iWQrfI8M2dDw%3D%3D" target="_blank">LinkedIn</a>
+                </button>
+                <a href="" download class="btn btn2"><i class="fa-solid fa-download"></i> Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Jasveen kaur.2024</p>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
